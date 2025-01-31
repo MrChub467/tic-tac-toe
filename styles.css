@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    padding: 40px;
+    margin: 20px 0 10px;
+}
+
+p {
+    margin: 10px 0 20px;
 }
 
 .container {
@@ -24,7 +29,25 @@ h1 {
 
 }
 
-button {
+.tile {
     height: 100px;
     border: none;
+    font-size: 3rem;
+    
+}
+
+.clear, .again {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+
+}
+
+.scores {
+    display: flex;
+    gap: 30px;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
 }
