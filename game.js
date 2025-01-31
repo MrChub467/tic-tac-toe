@@ -7,6 +7,7 @@ const gameBoard = (function () {
     let playerTwoScore = 0;
     let currentPlayer = playerOne;
     let currentPlayerToken = playerOneToken;
+    let firstPlayer = playerOne;
     let turn = 1;
     let locations = [];
     let description = document.querySelector("p");
@@ -87,8 +88,16 @@ const gameBoard = (function () {
             playerTwoScore = 0
         }
         else {
-            currentPlayer = playerTwo;
-            currentPlayerToken = playerTwoToken;
+            if (firstPlayer === playerOne) {
+                currentPlayer = playerTwo;
+                currentPlayerToken = playerTwoToken;
+                firstPlayer = playerTwo
+            }
+            else {
+                currentPlayer = playerOne;
+                currentPlayerToken = playerOneToken;
+                firstPlayer = playerOne
+            }
         }
         playAgain = false; 
         displayCurrentPlayer();
